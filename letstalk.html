@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Let's Talk</title>
+    <link rel="stylesheet" href="skills.css">
+</head>
+<style>
+body {
+    font-family: Arial, sans-serif;
+    background-color: #0c192c;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.chatbot-container {
+    width: 300px;
+    background-color: #0c192c;
+    border-radius: 10px;
+    box-shadow: 0 0 10px white;
+}
+
+.chatbox {
+    padding: 20px;
+    max-height: 400px;
+    overflow-y: auto;
+}
+
+.messages {
+    margin-bottom: 20px;
+}
+
+.bot-message, .user-message {
+    padding: 10px;
+    margin: 10px 0;
+    border-radius: 10px;
+}
+
+.bot-message {
+    background-color: white;
+    text-align: left;
+    color: black;
+}
+
+.user-message {
+    background-color: #4fc3dc;
+    color: white;
+    text-align: right;
+}
+
+.input-box {
+    display: flex;
+    justify-content: space-between;
+}
+
+input[type="text"] {
+    width: 80%;
+    padding: 10px;
+    border: 1px solid white;
+    border-radius: 5px;
+}
+
+button {
+    padding: 10px;
+    background-color: #461bd3;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #1fcb52;
+}
+
+</style>
+<body>
+
+    <div class="bubbles">
+        <span style="--i:11;"></span>
+        <span style="--i:12;"></span>
+        <span style="--i:22;"></span>
+        <span style="--i:24;"></span>
+        <span style="--i:10;"></span>
+        <span style="--i:14;"></span>
+        <span style="--i:15;"></span>
+        <span style="--i:19;"></span>
+        <span style="--i:20;"></span>
+        <span style="--i:16;"></span>
+        <span style="--i:11;"></span>
+        <span style="--i:19;"></span>
+        <span style="--i:13;"></span>
+        <span style="--i:16;"></span>
+        <span style="--i:18;"></span>
+        <span style="--i:12;"></span>
+        <span style="--i:17;"></span>
+        <span style="--i:21;"></span>
+        <span style="--i:22;"></span>
+        <span style="--i:26;"></span>
+    </div>
+
+
+
+    <div class="chatbot-container">
+        <div class="chatbox">
+            <div class="messages" id="chatbox">
+                <div class="bot-message">Hello I'm assistant to Mr.Tarun
+                <br>i'll respond on behalf of him</div>
+            </div>
+            <div class="input-box">
+                <input type="text" id="userInput" placeholder="Type your message..." />
+                <button onclick="sendMessage()">Send</button>
+            </div>
+        </div>
+    </div>
+    
+    <script>
+// script.js
+
+const predefinedResponses = {
+    "hello": "Hi there! How can I assist you?",
+    "hi": "Hi there! How can I assist you?",
+    "experience": "He is a fresher and done in house projects only and also he have good theoretical knowledge",
+    "education": "He completed BTech in Computer Science and Engineering with CGPA of 6.31.",
+    "notice period": "He have no notice period, he'll join immediately, comfortable working on-site/remote/hybrid in any time zone and also ready to relocate to any city in India.",
+    "bye": "Goodbye! Have a great day!",
+    "thanks": "You're welcome! Is there anything else I can help you with?",
+    "skills": "He have good knowledge in Docker, Kubernnetes, Jenkins, Ansible, Git, Linux, Java, HTML, CSS, JavaScript, Bootstrap, ReactJS",
+    "qualification":"He completed BTech in Computer Science and Engineering with CGPA of 6.31.",
+    "communication":"Telugu, English",
+    "email":"his email is saitarunbuddala54@gmail.com",
+    "mobile number":" his mobile number +919347756166",
+    "which college":"he graduated Engineering from Aditya Institute of Technology and Management Tekkali Srikakulam (Dist) Andhra Pradesh",
+
+    // Add more predefined responses as needed
+};
+
+function sendMessage() {
+    const userInput = document.getElementById("userInput").value.toLowerCase();
+    const chatbox = document.getElementById("chatbox");
+
+    if (userInput) {
+        const userMessageDiv = document.createElement("div");
+        userMessageDiv.classList.add("user-message");
+        userMessageDiv.textContent = userInput;
+        chatbox.appendChild(userMessageDiv);
+
+        const botMessageDiv = document.createElement("div");
+        botMessageDiv.classList.add("bot-message");
+        botMessageDiv.textContent = "Typing...";
+        chatbox.appendChild(botMessageDiv);
+        chatbox.scrollTop = chatbox.scrollHeight; // Scroll to the bottom
+
+        document.getElementById("userInput").value = ""; // Clear the input
+
+        // Simulate typing delay
+        setTimeout(() => {
+            if (predefinedResponses[userInput]) {
+                botMessageDiv.textContent = predefinedResponses[userInput];
+            } else {
+                botMessageDiv.textContent = "Sorry, I don't understand that.";
+            }
+            chatbox.scrollTop = chatbox.scrollHeight; // Scroll to the bottom
+        }, 1000); // 1 second delay to simulate typing
+    }
+}
+
+// Listen for Enter key press in the input box
+document.getElementById("userInput").addEventListener("keydown", function(event) {
+    if (event.key === "Enter") {
+        sendMessage();
+    }
+});
+
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,212 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+    background: #0c192c;
+    color: white;
+    font-family: Arial, sans-serif;
+}
+
+.container {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.bubbles {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+.bubbles span {
+    position: relative;
+    width: 30px;
+    height: 30px;
+    background: #4fc3dc;
+    margin: 0 4px;
+    border-radius: 50%;
+    box-shadow: 0 0 0 10px #4fc3dc44, 0 0 50px #4fc3dc, 0 0 100px #4fc3dc;
+    animation: animate 15s linear infinite;
+    animation-duration: calc(125s / var(--i));
+}
+
+.bubbles span:nth-child(even) {
+    background: #ff2d75;
+    box-shadow: 0 0 0 10px #ff2d7544, 0 0 50px #ff2d75, 0 0 100px #ff2d75;
+}
+
+@keyframes animate {
+    0% {
+        transform: translateY(250vh) scale(0);
+    }
+
+    100% {
+        transform: translateY(-10vh) scale(1);
+    }
+}
+
+/* Content Over Animation */
+.content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 10;
+    text-align: center;
+}
+
+.content h1 {
+    font-size: 3rem;
+    margin-bottom: 20px;
+}
+
+.content p {
+    font-size: 1.2rem;
+}
+
+.content button {
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: #4fc3dc;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    font-size: 1rem;
+    cursor: pointer;
+}
+
+.content button:hover {
+    background-color: #ff2d75;
+}
+
+.content button a{
+    text-decoration: none;
+    color: black;
+}
+  
+  .row {
+    display: flex;
+    margin-left:-5px;
+    margin-right:-5px;
+  }
+  
+  .column {
+    flex: 50%;
+    padding: 5px;
+  }
+  
+  table {
+    border-collapse: collapse;
+    border-spacing: 0;
+    width: 100%;
+    border: 1px solid white;
+  }
+  
+  th, td {
+    text-align: left;
+    padding: 16px;
+  }
+
+.about{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 10;
+    text-align: center;
+}
+
+.about h1{
+    font-size: 60;
+    padding-bottom: 50px;
+    margin-bottom: 20px;
+}
+
+.about ul{
+    font-size: large;
+    margin-bottom: 20px;
+}
+
+.about1{
+        float: right;
+        border: 1px dotted black;
+        margin: 0px 0px 15px 20px;
+}
+
+.con{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 10;
+    text-align: center;   
+}
+
+.con h1{
+    font-size: 60;
+    padding-bottom: 50px;
+    margin-bottom: 20px;
+}
+
+.con p{
+    padding: 10px;
+}
+
+.project{
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 20px;
+}
+
+.project h1{
+    margin-top: 20px;
+    padding-top: 20px;
+    text-align: center;
+    padding-bottom: 20px;
+}
+
+.project th{
+    color: yellowgreen;
+}
+
+.project a{
+    text-decoration: none;
+    color: white;
+}
+
+.project a:hover{
+    color: yellow;
+}
+
+.project {
+    text-align: center; /* Centers the heading and table content horizontally */
+}
+
+.tab{
+    margin-left: 0;
+    margin-right: 0;
+    border-collapse: collapse; /* Ensures borders are collapsed */
+}
+
+th, td {
+    padding: 5px; /* Reduced padding for less space between cells */
+    text-align: center; /* Centers the content within the cells */
+}
+
+th {
+    font-weight: bold; /* Ensures table headers are bold */
+}
+
+.tab, th, td {
+    margin: 0; /* Removes any default margin */
+}
