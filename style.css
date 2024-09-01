@@ -305,7 +305,24 @@ body{
     }
 }
 
+.button-container {
+    text-align: left; /* Optional: Center the button within the container */
+}
 
+.button-link {
+    display: inline-block;
+    padding: 10px 20px; /* Adjust padding as needed */
+    background-color: #00abf0;
+    color: black;
+    text-decoration: none;
+    border-radius: 5px; /* Optional: Add rounded corners */
+    font-weight: bold; /* Optional: Make the text bold */
+}
+
+.button-link:hover {
+    background-color: darkblue; /* Optional: Change color on hover */
+    color: white; /* Optional: Change text color on hover */
+}
 
 
 
