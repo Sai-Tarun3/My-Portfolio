@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="skills.css">
     <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
     <div class="container">
         <div class="bubbles">
@@ -38,101 +39,135 @@
             <p>I have full pledged knowledge on AWS DevOps and Java Full Stack development.</p>
             <div class="row">
                 <div class="column">
-                  <table>
-                    <tr>
-                        <th>SNo</th>
-                        <th>Course Name</th>
-                        <th>Skill Percentage</th>
-                    </tr>
-                    <tr>
-                        <td>1</td>
-                        <td>AWS</td>
-                        <td><meter min="0" max="100" value="30"></meter></td>
-                    </tr>
-                    <tr>
-                        <td>2</td>
-                        <td>Docker</td>
-                        <td><meter min="0" max="100" value="90"></meter></td>
-                    </tr>
-                    <tr>
-                        <td>3</td>
-                        <td>Jenkins</td>
-                        <td><meter min="0" max="100" value="80"></meter></td>
-                    </tr>
-                    <tr>
-                        <td>4</td>
-                        <td>Ansible</td>
-                        <td><meter min="0" max="100" value="50"></meter></td>
-                    </tr>
-                    <tr>
-                        <td>5</td>
-                        <td>Linux</td>
-                        <td><meter min="0" max="100" value="60"></meter></td>
-                    </tr>
-                    <tr>
-                        <td>6</td>
-                        <td>Kubernetes</td>
-                        <td><meter min="0" max="100" value="70"></meter></td>
-                    </tr>
-                    <tr>
-                        <td>7</td>
-                        <td>Git</td>
-                        <td><meter min="0" max="100" value="50"></meter></td>
-                    </tr>
-                    
-    
-                  </table>
+                    <table>
+                        <tr>
+                            <th>SNo</th>
+                            <th>Course Name</th>
+                            <th>Skill Percentage</th>
+                        </tr>
+                        <tr>
+                            <td>1</td>
+                            <td>AWS</td>
+                            <td><meter id="meter-aws" min="0" max="100" value="0"></meter></td>
+                        </tr>
+                        <tr>
+                            <td>2</td>
+                            <td>Docker</td>
+                            <td><meter id="meter-docker" min="0" max="100" value="0"></meter></td>
+                        </tr>
+                        <tr>
+                            <td>3</td>
+                            <td>Jenkins</td>
+                            <td><meter id="meter-jenkins" min="0" max="100" value="0"></meter></td>
+                        </tr>
+                        <tr>
+                            <td>4</td>
+                            <td>Ansible</td>
+                            <td><meter id="meter-ansible" min="0" max="100" value="0"></meter></td>
+                        </tr>
+                        <tr>
+                            <td>5</td>
+                            <td>Linux</td>
+                            <td><meter id="meter-linux" min="0" max="100" value="0"></meter></td>
+                        </tr>
+                        <tr>
+                            <td>6</td>
+                            <td>Kubernetes</td>
+                            <td><meter id="meter-kubernetes" min="0" max="100" value="0"></meter></td>
+                        </tr>
+                        <tr>
+                            <td>7</td>
+                            <td>Git</td>
+                            <td><meter id="meter-git" min="0" max="100" value="0"></meter></td>
+                        </tr>
+                    </table>
                 </div>
                 <div class="column">
-                  <table>
-                    <tr>
-                        <th>SNo</th>
-                        <th>Course Name</th>
-                        <th>Skill Percentage</th>
-                    </tr>
-                    <tr>
-                        <td>8</td>
-                        <td>HTML</td>
-                        <td><meter min="0" max="100" value="100"></meter></td>
-                    </tr>
-                    <tr>
-                        <td>9</td>
-                        <td>CSS</td>
-                        <td><meter min="0" max="100" value="90"></meter></td>
-                    </tr>
-                    <tr>
-                        <td>10</td>
-                        <td>JavaScript</td>
-                        <td><meter min="0" max="100" value="70"></meter></td>
-                    </tr>
-                    <tr>
-                        <td>11</td>
-                        <td>React JS</td>
-                        <td><meter min="0" max="100" value="60"></meter></td>
-                    </tr>
-                    <tr>
-                        <td>12</td>
-                        <td>Oracle</td>
-                        <td><meter min="0" max="100" value="60"></meter></td>
-                    </tr>
-                    <tr>
-                        <td>13</td>
-                        <td>Java</td>
-                        <td><meter min="0" max="100" value="60"></meter></td>
-                    </tr>
-                    <tr>
-                        <td>14</td>
-                        <td>Bootstrap</td>
-                        <td><meter min="0" max="100" value="60"></meter></td>
-                    </tr>
-                  </table>
+                    <table>
+                        <tr>
+                            <th>SNo</th>
+                            <th>Course Name</th>
+                            <th>Skill Percentage</th>
+                        </tr>
+                        <tr>
+                            <td>8</td>
+                            <td>HTML</td>
+                            <td><meter id="meter-html" min="0" max="100" value="0"></meter></td>
+                        </tr>
+                        <tr>
+                            <td>9</td>
+                            <td>CSS</td>
+                            <td><meter id="meter-css" min="0" max="100" value="0"></meter></td>
+                        </tr>
+                        <tr>
+                            <td>10</td>
+                            <td>JavaScript</td>
+                            <td><meter id="meter-js" min="0" max="100" value="0"></meter></td>
+                        </tr>
+                        <tr>
+                            <td>11</td>
+                            <td>React JS</td>
+                            <td><meter id="meter-react" min="0" max="100" value="0"></meter></td>
+                        </tr>
+                        <tr>
+                            <td>12</td>
+                            <td>Oracle</td>
+                            <td><meter id="meter-oracle" min="0" max="100" value="0"></meter></td>
+                        </tr>
+                        <tr>
+                            <td>13</td>
+                            <td>Java</td>
+                            <td><meter id="meter-java" min="0" max="100" value="0"></meter></td>
+                        </tr>
+                        <tr>
+                            <td>14</td>
+                            <td>Bootstrap</td>
+                            <td><meter id="meter-bootstrap" min="0" max="100" value="0"></meter></td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+        </div>
+
+        <div class="button-container">
+            <a href="index.html" class="button-link">Go to Home</a>
         </div>
     </div>
 
-    <div class="button-container">
-        <a href="index.html" class="button-link">Go to Home</a>
-    </div>
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            const meters = [
+                { id: "meter-aws", value: 30 },
+                { id: "meter-docker", value: 90 },
+                { id: "meter-jenkins", value: 80 },
+                { id: "meter-ansible", value: 50 },
+                { id: "meter-linux", value: 60 },
+                { id: "meter-kubernetes", value: 70 },
+                { id: "meter-git", value: 50 },
+                { id: "meter-html", value: 100 },
+                { id: "meter-css", value: 90 },
+                { id: "meter-js", value: 70 },
+                { id: "meter-react", value: 60 },
+                { id: "meter-oracle", value: 60 },
+                { id: "meter-java", value: 60 },
+                { id: "meter-bootstrap", value: 60 }
+            ];
 
+            meters.forEach(meter => {
+                const meterElement = document.getElementById(meter.id);
+                let currentValue = 0;
+
+                const interval = setInterval(() => {
+                    if (currentValue < meter.value) {
+                        currentValue++;
+                        meterElement.value = currentValue;
+                    } else {
+                        clearInterval(interval);
+                    }
+                }, 20); // Adjust the speed of the animation by changing the interval time
+            });
+        });
+    </script>
 </body>
 
 </html>

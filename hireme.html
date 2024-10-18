@@ -20,12 +20,13 @@
             background: #0c192c;
             color: white;
             min-height: 100vh;
+            position: relative;
         }
         
         .container {
             position: relative;
             width: 100%;
-            height: 100vh;
+            height: auto; /* Change height to auto for dynamic content */
             overflow: hidden;
         }
 
@@ -67,19 +68,19 @@
         }
 
         .content {
-            position: absolute;
-            z-index: 1;
+            position: relative; /* Change to relative for absolute positioning of button */
             padding: 20px;
             margin: auto;
             max-width: 800px;
+            z-index: 1;
         }
 
         .resume-section-skills ul li a {
-            text-decoration: none ;
-            color: white
+            text-decoration: none;
+            color: white;
         }
 
-        .resume-section{
+        .resume-section {
             margin-bottom: 50px;
         }
 
@@ -88,10 +89,28 @@
         }
 
         .container {
-           display: flex;
-            gap: 400px; /* Adds 50px space between the items */
+            display: flex;
+            gap: 400px;
         }
 
+        /* Button styling */
+        .download-button {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: #4fc3dc;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+            position: absolute; /* Make the button absolutely positioned */
+            bottom: 20px; /* Position it 20px from the bottom */
+            left: 50%; /* Center it horizontally */
+            transform: translateX(-50%); /* Adjust for centering */
+        }
+
+        .download-button:hover {
+            background-color: #00abf0;
+        }
     </style>
 </head>
 <body>
@@ -128,23 +147,24 @@
 
         <div class="resume-section">
             <h2>Objective</h2>
-
-            <p>I sincerely believe that only hard work and dedication towards the work 
-               entrusted will lead a person to reach the goal of success. Keeping this as my objective,
-               I like to add value to the organization which will provide mean ambience for learning and
-               to grow with organization.</p>
-
+            <p>I aim to join an organization that provides job satisfaction and opportunities
+               for self-development while staying at the cutting edge of technology. I believe 
+               hard work and dedication lead to success, and I strive to add value in a supportive, 
+               growth-focused environment.</p>
         </div><br>
 
         <div class="resume-section-skills">
             <h2>Projects</h2>
             <h3>Front-End Developer</h3>
-            <p>Done two projects</p>
             <ul>
                 <li>Developed and maintained web applications using HTML, CSS, JavaScript, and Bootstrap.</li>
                 <li>Designed user-friendly interfaces.</li>
-                <li><a href="https://github.com/Sai-Tarun3/railway-latest.git" target="_blank">Project1(Click Here)</a></li>
-                <li><a href="https://github.com/Sai-Tarun3/Front-End-Website.git" target="_blank">Project2(Click Here)</a></li>
+                <ol type="1">
+                    <li><a href="https://github.com/Sai-Tarun3/railway-latest.git" target="_blank">Train Reservation System (Click Here)</a></li>
+                    <li><a href="https://github.com/Sai-Tarun3/Front-End-Website.git" target="_blank">Arun IT (Click Here)</a></li>
+                    <li><a href="https://github.com/Sai-Tarun3/DevOps-Project.git" target="_blank">Voting App (Click Here)</a></li>
+                    <li><a href="https://github.com/Sai-Tarun3/RPCLANINTERN.git" target="_blank">Login/Signup Page (Click Here)</a></li>
+                </ol>
             </ul>
         </div><br><br>
 
@@ -168,7 +188,7 @@
                 <li>Database Management: Oracle</li>
                 <li>Version Control Tool: Git, GitHub</li>
                 <li>Web Servers: Tomcat</li>
-                <li>Cloud Technology: Amazon Web Servers</li>
+                <li>Cloud Technology: Amazon Web Services</li>
                 <li>Containerization Tools: Docker, Kubernetes, ECS, ECR, EKS</li>
                 <li>Automation Tools: Jenkins</li>
                 <li>Configuration Tools: Ansible</li>
@@ -181,13 +201,15 @@
         <div>
             <address>
                 <h2>Personal Details</h2>
-                    Nationality	        :   		Indian<br>
-                    Sex		            :           Male<br>
-                    Date of Birth	    : 		    27 April 2002<br>
-                    Marital Status	    : 		    Single<br>
-                    Hobbies	            : 		    Playing games, Listening to Music, Watching Movies<br>
-                    Address	            : 		    Muddada street, Narasannapeta, Srikakulam District, 
-                                                    Andhra Pradesh – 532421    
+                Nationality: Indian<br>
+                Sex: Male<br>
+                Date of Birth: 27 April 2002<br>
+                Marital Status: Single<br>
+                Hobbies: Playing games, Listening to Music, Watching Movies<br>
+                Current Address: Smik Apartment, Madhura Nagar Metro Station beside, Hyderabad,
+                Telangana – 500045.  
+                Permanent Address: Muddada street, Narasannapeta, Srikakulam District, 
+                Andhra Pradesh – 532421.
             </address>
         </div><br><br>
 
@@ -210,10 +232,9 @@
                 </address>
             </div>
         </div>
+
+        <!-- Download button -->
+        <a href="BUDDALA SAI TARUN.docx" download class="download-button">Download My Resume</a>
     </div>
-
-    
-
 </body>
 </html>
-
